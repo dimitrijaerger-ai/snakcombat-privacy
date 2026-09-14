@@ -1,0 +1,169 @@
+from pathlib import Path
+
+html = """<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anleitung zur Löschung eines SNAKCOMBAT-Spielkontos und der damit verbundenen Daten.">
+  <title>SNAKCOMBAT – Konto löschen</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #121923;
+      --panel2: #18212d;
+      --text: #eef3f8;
+      --muted: #aab6c3;
+      --accent: #62e6a7;
+      --border: #2a3746;
+      --warning: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    header {
+      background: linear-gradient(135deg, #111a25, #0d141d);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 22px;
+    }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    h2 { margin-top: 32px; font-size: 22px; }
+    p, li { color: var(--muted); }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin: 18px 0;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin: 18px 0;
+    }
+    .number {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #07110c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .important {
+      border-left: 4px solid var(--warning);
+      background: #17170f;
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+    strong { color: var(--text); }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>SNAKCOMBAT – Konto löschen</h1>
+      <p>Anleitung zur Löschung deines SNAKCOMBAT-Spielkontos und der damit verbundenen Daten.</p>
+    </header>
+
+    <section class="card">
+      <h2>So kannst du dein Konto löschen</h2>
+
+      <div class="step">
+        <div class="number">1</div>
+        <div>
+          <strong>Öffne SNAKCOMBAT.</strong>
+          <p>Starte das Spiel auf deinem Android-Gerät.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <div>
+          <strong>Öffne dein Profil.</strong>
+          <p>Gehe im Hauptmenü zum Bereich <strong>Profil</strong>.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <div>
+          <strong>Öffne den Bereich „Konto“.</strong>
+          <p>Wähle in deinem Profil den Bereich <strong>Konto</strong>.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <div>
+          <strong>Wähle „Konto löschen“.</strong>
+          <p>Folge der Bestätigung in der App, um die Löschung deines Spielkontos zu beantragen bzw. durchzuführen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Welche Daten werden gelöscht?</h2>
+      <p>Bei der Löschung des SNAKCOMBAT-Kontos werden die mit dem Spielkonto verbundenen personenbezogenen bzw. spielbezogenen Kontodaten gelöscht, soweit keine gesetzliche Verpflichtung zur weiteren Speicherung besteht.</p>
+      <ul>
+        <li>Kontobezogene Spieldaten</li>
+        <li>Mit dem Spielkonto verbundene Spielstatistiken und Fortschrittsdaten</li>
+        <li>Weitere dem Konto zugeordnete Daten, soweit sie für die Kontoführung gespeichert wurden</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Welche Daten können erhalten bleiben?</h2>
+      <p>Bestimmte Daten können aufgrund gesetzlicher Aufbewahrungspflichten oder technischer bzw. sicherheitsbezogener Anforderungen für einen begrenzten Zeitraum gespeichert bleiben. Solche Daten werden nicht für andere Zwecke verwendet und nach Ablauf der jeweiligen Aufbewahrungsfrist gelöscht.</p>
+    </section>
+
+    <section class="card">
+      <h2>Wichtig: Konto löschen oder Spiel zurücksetzen</h2>
+      <div class="important">
+        <strong>„Spiel zurücksetzen“ ist nicht dasselbe wie „Konto löschen“.</strong>
+        <p>Das Zurücksetzen des Spiels betrifft den Spielstand bzw. Spielfortschritt. Wenn du dein Konto und die damit verbundenen Kontodaten löschen möchtest, verwende ausdrücklich die Funktion <strong>„Konto löschen“</strong>.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Probleme bei der Löschung?</h2>
+      <p>Wenn die Kontolöschung in der App nicht funktioniert, aktualisiere SNAKCOMBAT auf die neueste verfügbare Version und versuche es erneut. Falls das Problem weiterhin besteht, kann der Entwickler über die auf der Google-Play-Seite von SNAKCOMBAT angegebene Kontaktmöglichkeit kontaktiert werden.</p>
+    </section>
+
+    <footer>
+      <strong>SNAKCOMBAT</strong><br>
+      Entwickler: D Järger<br>
+      Diese Seite enthält die Anleitung zur Beantragung bzw. Durchführung der Kontolöschung für SNAKCOMBAT.
+    </footer>
+  </main>
+</body>
+</html>
+"""
+
+path = Path("/mnt/data/account-deletion.html")
+path.write_text(html, encoding="utf-8")
+print(f"Datei erstellt: {path}")
